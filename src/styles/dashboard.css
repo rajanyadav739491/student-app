@@ -1,0 +1,444 @@
+/* ==========================================================================
+   Ultimate Student OS - Dashboard & Module Views Styling
+   ========================================================================== */
+
+/* Dashboard Layout Grid */
+.dashboard-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* Hero & Quick Actions Banner */
+.hero-banner {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(6, 182, 212, 0.08));
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-6);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -10%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.hero-heading {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.hero-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.exam-target-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: var(--color-amber);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+}
+
+/* Quick Actions Strip */
+.quick-actions-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-3);
+}
+
+.quick-action-tile {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+}
+
+.quick-action-tile:hover {
+  background: var(--bg-surface-elevated);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.quick-action-tile .action-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.quick-action-tile .action-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.quick-action-tile .action-title {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.quick-action-tile .action-desc {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* Metric Cards 3-Column Top Grid */
+.metrics-grid-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-5);
+}
+
+/* Focus Time Card Specifics */
+.focus-stat-display {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  margin-top: var(--space-2);
+}
+
+.focus-stat-numbers {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.focus-val-huge {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  font-family: var(--font-family-mono);
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+.focus-target-label {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+.focus-sessions-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: var(--space-3);
+}
+
+.session-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--bg-surface-elevated);
+}
+
+.session-dot.active {
+  background: var(--color-primary);
+  box-shadow: 0 0 8px var(--color-primary);
+}
+
+/* Streak Heatmap */
+.streak-metric-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.streak-counter-box {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.streak-big-val {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  color: var(--color-amber);
+  font-family: var(--font-family-mono);
+}
+
+.streak-sub-text {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+}
+
+.streak-week-dots {
+  display: flex;
+  justify-content: space-between;
+  background: var(--bg-surface-elevated);
+  padding: 10px 14px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+}
+
+.day-dot-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.day-indicator-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.day-indicator-dot.active {
+  background: var(--color-amber);
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.5);
+}
+
+/* Quiz Score Card */
+.quiz-score-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.quiz-acc-percent {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  font-family: var(--font-family-mono);
+  color: var(--color-emerald);
+}
+
+.quiz-breakdown-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: var(--space-3);
+}
+
+/* Mid Section 2-Column Grid (Syllabus & Tasks) */
+.dashboard-grid-mid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+}
+
+@media (max-width: 1024px) {
+  .dashboard-grid-mid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Syllabus Progress Breakdown */
+.syllabus-overall-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.syllabus-stat-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.subject-item-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.subject-header-mini {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+}
+
+/* Today's Tasks Interactive Checklist UI */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+
+.task-item:hover {
+  border-color: var(--border-light);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.task-checkbox-mock {
+  width: 18px;
+  height: 18px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 11px;
+}
+
+.task-checkbox-mock.checked {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.task-title {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.task-item.completed .task-title {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+/* Revision Due Card */
+.revision-due-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.revision-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface-elevated);
+  border-left: 3px solid var(--color-rose);
+  font-size: var(--font-size-sm);
+}
+
+.revision-item-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.revision-item-title {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.revision-item-sub {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* Goals Card */
+.goals-progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.goal-track-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface-elevated);
+}
+
+/* Module Placeholders (Views for Phases 2–14) */
+.module-placeholder-view {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.module-header-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.module-info-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.module-phase-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background: rgba(99, 102, 241, 0.12);
+  color: var(--color-primary);
+  width: fit-content;
+}

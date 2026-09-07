@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ultimate Student OS — AI-Powered Student Productivity App for PCM, JEE, NDA and competitive exams">
+  <title>Student OS — AI-Powered Academic Operating System</title>
+  
+  <!-- CSS Stylesheets -->
+  <script type="module" crossorigin src="/assets/index-DSnF28ED.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Dt_toH9g.css">
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Mobile Sidebar Backdrop Overlay -->
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <!-- Collapsible / Responsive Sidebar -->
+    <aside id="app-sidebar" class="app-sidebar" aria-label="Main Navigation">
+      <div class="sidebar-header">
+        <a href="#dashboard" class="brand-logo" id="brand-logo-btn">
+          <div class="logo-symbol">Ω</div>
+          <div class="brand-text">
+            <span class="brand-title">Student OS <span class="brand-tag">PRO</span></span>
+            <span class="brand-subtitle">PCM &amp; Exam Engine</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Target Exam Pill -->
+      <div class="exam-target-pill">
+        <div class="target-label">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          JEE / NDA 2026
+        </div>
+        <span class="days-left">234 Days Left</span>
+      </div>
+
+      <!-- Primary Sidebar Navigation Links -->
+      <nav class="sidebar-nav">
+        <span class="nav-section-title">Core Operating System</span>
+        
+        <a href="#dashboard" class="nav-item active" data-view="dashboard" id="nav-dashboard">
+          <span class="nav-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+          </span>
+          <span>Dashboard</span>
+        </a>
+
+        <a href="#timer" class="nav-item" data-view="timer" id="nav-timer">
+          <span class="nav-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </span>
+          <span>Focus Timer</span>
+          <span class="nav-badge badge-outline">25m</span>
+        </a>
+
+        <a href="#syllabus" class="nav-item" data-view="syllabus" id="nav-syllabus">
+          <span class="nav-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
+          </span>
+          <span>Syllabus</span>
+          <span class="nav-badge badge-outline">62%</span>
+        </a>
+
+        <a href="#goals" class="nav-item" data-view="goals" id="nav-goals">
+          <span class="nav-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></svg>
+          </span>
+          <span>Goals</span>
+        </a>
+
+        <a href="#flashcards" class="nav-item" data-view="flashcards" id="nav-flashcards">
+          <span class="nav-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m9 8 6 4-6 4Z"/></svg>
+          </span>
+          <span>Flashcards</span>
+          <span class="nav-badge badge-outline">48</span>
+        </a>
+
+        <a href="#quiz" class="nav-item" data-view="quiz" id="nav-quiz">
+          <span class="nav-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </span>
+          <span>Quiz</span>
+          <span class="nav-badge badge-outline">82%</span>
+        </a>
+
+        <a href="#resources" class="nav-item" data-view="resources" id="nav-resources">
+          <span class="nav-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg>
+          </span>
+          <span>Resources</span>
+        </a>
+
+        <a href="#revision" class="nav-item" data-view="revision" id="nav-revision">
+          <span class="nav-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+          </span>
+          <span>Revision</span>
+          <span class="nav-badge badge-urgent">3 Due</span>
+        </a>
+
+        <span class="nav-section-title" style="margin-top: 8px;">AI &amp; Intelligence</span>
+
+        <a href="#ai" class="nav-item" data-view="ai" id="nav-ai">
+          <span class="nav-icon" style="color: #a855f7;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+          </span>
+          <span>NOX AI Tutor</span>
+          <span class="nav-badge badge-nox">AI</span>
+        </a>
+
+        <a href="#analytics" class="nav-item" data-view="analytics" id="nav-analytics">
+          <span class="nav-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg>
+          </span>
+          <span>Analytics</span>
+        </a>
+
+        <a href="#settings" class="nav-item" data-view="settings" id="nav-settings">
+          <span class="nav-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+          </span>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <!-- Sidebar User Profile Footer -->
+      <div class="sidebar-footer">
+        <div class="user-profile-chip" title="Profile Settings">
+          <div class="user-avatar">AS</div>
+          <div class="user-meta">
+            <span class="user-name">Arjun Sharma</span>
+            <span class="user-role">JEE / NDA Aspirant</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="app-main-layout">
+      <!-- App Header / Topbar -->
+      <header class="app-header">
+        <div class="header-left">
+          <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Open Navigation">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
+          </button>
+          <div class="header-title-box">
+            <h1 class="header-greeting">Good Morning, Student 👋</h1>
+            <span class="header-subline">PCM Master Track • Target Exam: JEE Advanced &amp; NDA</span>
+          </div>
+        </div>
+
+        <div class="header-center">
+          <div class="search-bar-placeholder" id="global-search-btn" title="Quick Search">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <span>Search topics, notes, formulas...</span>
+            <span class="kbd-shortcut">Ctrl K</span>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <!-- Daily Streak Pill -->
+          <div class="streak-pill" title="12-Day Active Study Streak">
+            <span>🔥</span>
+            <span>12 Days</span>
+          </div>
+
+          <!-- Theme Switcher Button -->
+          <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Dark/Light Mode">
+            <svg id="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            <svg id="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- Main Dynamic Content Views -->
+      <main class="app-content">
+
+        <!-- ================================================================ -->
+        <!-- VIEW 1: MAIN DASHBOARD                                           -->
+        <!-- ================================================================ -->
+        <section id="view-dashboard" class="view-container active">
+          <div class="dashboard-grid">
+            
+            <!-- Hero Banner with Quick Actions Strip -->
+            <div class="hero-banner">
+              <div class="hero-top">
+                <div>
+                  <h2 class="hero-heading">Mission Control Center</h2>
+                  <p class="hero-subtitle">High-yield study cycle: Deep work, rapid syllabus coverage, active spaced recall.</p>
+                </div>
+                <div class="exam-target-tag">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                  Daily Target: 3.0 Hours Deep Work
+                </div>
+              </div>
+
+              <!-- Quick Actions Bar -->
+              <div class="quick-actions-strip">
+                <button class="quick-action-tile" data-goto="timer" id="qa-start-focus">
+                  <div class="action-icon" style="background: rgba(99, 102, 241, 0.15); color: var(--color-primary);">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                  </div>
+                  <div class="action-meta">
+                    <span class="action-title">Start Focus</span>
+                    <span class="action-desc">Pomodoro &amp; Deep Work</span>
+                  </div>
+                </button>
+
+                <button class="quick-action-tile" data-goto="ai" id="qa-ask-nox">
+                  <div class="action-icon" style="background: rgba(168, 85, 247, 0.15); color: #a855f7;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+                  </div>
+                  <div class="action-meta">
+                    <span class="action-title">Ask NOX</span>
+                    <span class="action-desc">Concept AI tutor</span>
+                  </div>
+                </button>
+
+                <button class="quick-action-tile" data-goto="ai" id="qa-scan-doubt">
+                  <div class="action-icon" style="background: rgba(6, 182, 212, 0.15); color: var(--color-cyan);">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+                  </div>
+                  <div class="action-meta">
+                    <span class="action-title">Scan Doubt</span>
+                    <span class="action-desc">Camera solver</span>
+                  </div>
+                </button>
+
+                <button class="quick-action-tile" data-goto="quiz" id="qa-take-quiz">
+                  <div class="action-icon" style="background: rgba(16, 185, 129, 0.15); color: var(--color-emerald);">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                  </div>
+                  <div class="action-meta">
+                    <span class="action-title">Take Quiz</span>
+                    <span class="action-desc">PCM practice tests</span>
+                  </div>
+                </button>
+
+                <button class="quick-action-tile" data-goto="revision" id="qa-revision">
+                  <div class="action-icon" style="background: rgba(244, 63, 94, 0.15); color: var(--color-rose);">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+                  </div>
+                  <div class="action-meta">
+                    <span class="action-title">Revision</span>
+                    <span class="action-desc">3 Topics pending</span>
+                  </div>
+                </button>
+
+                <button class="quick-action-tile" data-goto="resources" id="qa-resources">
+                  <div class="action-icon" style="background: rgba(245, 158, 11, 0.15); color: var(--color-amber);">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/></svg>
+                  </div>
+                  <div class="action-meta">
+                    <span class="action-title">Resources</span>
+                    <span class="action-desc">Notes &amp; PYQs</span>
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <!-- Metrics Row 1: Today's Focus Time, Study Streak, Quiz Score, Revision Due -->
+            <div class="metrics-grid-top">
+              
+              <!-- CARD 1: Today's Focus Time -->
+              <div class="card" id="card-focus-time">
+                <div class="card-header">
+                  <div class="card-title-group">
+                    <div class="card-icon-wrap" style="color: var(--color-primary);">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <div>
+                      <h3 class="card-title">Today's Focus Time</h3>
+                      <span class="card-subtitle">Daily goal: 3 hrs</span>
+                    </div>
+                  </div>
+                  <span class="card-action" data-goto="timer">Timer &rarr;</span>
+                </div>
+                
+                <div class="focus-stat-display">
+                  <!-- Circular Progress SVG Representation -->
+                  <div class="circular-progress-wrap" style="width: 84px; height: 84px;">
+                    <svg class="circular-progress-svg" width="84" height="84" viewBox="0 0 36 36">
+                      <path class="circular-progress-bg" stroke-width="3.5" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                      <path class="circular-progress-val" stroke-width="3.5" stroke-dasharray="25, 100" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    </svg>
+                    <div class="circular-progress-content">
+                      <span style="font-weight: 800; font-size: 0.95rem; font-family: var(--font-family-mono);">25%</span>
+                    </div>
+                  </div>
+
+                  <div class="focus-stat-numbers">
+                    <span class="focus-val-huge">45 <small style="font-size: 1rem; color: var(--text-secondary);">min</small></span>
+                    <span class="focus-target-label">Target: 180 min (3h 00m)</span>
+                    <div class="focus-sessions-row">
+                      <span class="session-dot active" title="Session 1 (25m)"></span>
+                      <span class="session-dot active" title="Session 2 (20m)"></span>
+                      <span class="session-dot" title="Pending Session 3"></span>
+                      <span class="session-dot" title="Pending Session 4"></span>
+                      <span class="session-dot" title="Pending Session 5"></span>
+                      <span class="session-dot" title="Pending Session 6"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARD 2: Study Streak -->
+              <div class="card" id="card-study-streak">
+                <div class="card-header">
+                  <div class="card-title-group">
+                    <div class="card-icon-wrap" style="color: var(--color-amber);">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                    </div>
+                    <div>
+                      <h3 class="card-title">Study Streak</h3>
+                      <span class="card-subtitle">Consistency index</span>
+                    </div>
+                  </div>
+                  <span class="badge badge-success">Top 5%</span>
+                </div>
+
+                <div class="streak-metric-wrap">
+                  <div class="streak-counter-box">
+                    <span class="streak-big-val">12</span>
+                    <span class="streak-sub-text">Days Continuous Study</span>
+                  </div>
+
+                  <!-- 7-Day Heatmap Indicator -->
+                  <div class="streak-week-dots">
+                    <div class="day-dot-col">
+                      <span class="day-indicator-dot active"></span>
+                      <span>M</span>
+                    </div>
+                    <div class="day-dot-col">
+                      <span class="day-indicator-dot active"></span>
+                      <span>T</span>
+                    </div>
+                    <div class="day-dot-col">
+                      <span class="day-indicator-dot active"></span>
+                      <span>W</span>
+                    </div>
+                    <div class="day-dot-col">
+                      <span class="day-indicator-dot active"></span>
+                      <span>T</span>
+                    </div>
+                    <div class="day-dot-col">
+                      <span class="day-indicator-dot active"></span>
+                      <span>F</span>
+                    </div>
+                    <div class="day-dot-col">
+                      <span class="day-indicator-dot active"></span>
+                      <span>S</span>
+                    </div>
+                    <div class="day-dot-col">
+                      <span class="day-indicator-dot active"></span>
+                      <span>S</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARD 3: Quiz Score & Accuracy -->
+              <div class="card" id="card-quiz-score">
+                <div class="card-header">
+                  <div class="card-title-group">
+                    <div class="card-icon-wrap" style="color: var(--color-emerald);">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    </div>
+                    <div>
+                      <h3 class="card-title">Quiz Score</h3>
+                      <span class="card-subtitle">18 Quizzes completed</span>
+                    </div>
+                  </div>
+                  <span class="card-action" data-goto="quiz">New Quiz &rarr;</span>
+                </div>
+
+                <div class="quiz-score-display">
+                  <div>
+                    <span class="quiz-acc-percent">82%</span>
+                    <p class="text-secondary" style="font-size: var(--font-size-xs);">Average PCM Accuracy</p>
+                  </div>
+                  <div style="text-align: right;">
+                    <span class="mono" style="font-size: var(--font-size-lg); font-weight: 700; color: var(--text-primary);">148/180</span>
+                    <p class="text-muted" style="font-size: var(--font-size-xs);">Correct Answers</p>
+                  </div>
+                </div>
+
+                <div class="quiz-breakdown-tags">
+                  <span class="badge badge-physics">Physics: 88%</span>
+                  <span class="badge badge-maths">Maths: 84%</span>
+                  <span class="badge badge-chemistry">Chem: 74%</span>
+                </div>
+              </div>
+
+              <!-- CARD 4: Revision Due -->
+              <div class="card" id="card-revision-due">
+                <div class="card-header">
+                  <div class="card-title-group">
+                    <div class="card-icon-wrap" style="color: var(--color-rose);">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+                    </div>
+                    <div>
+                      <h3 class="card-title">Revision Due</h3>
+                      <span class="card-subtitle">Spaced repetition queue</span>
+                    </div>
+                  </div>
+                  <span class="badge badge-urgent">3 Today</span>
+                </div>
+
+                <div class="revision-due-list">
+                  <div class="revision-item">
+                    <div class="revision-item-meta">
+                      <span class="revision-item-title">Physics — Laws of Motion</span>
+                      <span class="revision-item-sub">Interval: 7 Days (Rev 3)</span>
+                    </div>
+                    <span class="badge badge-physics">Physics</span>
+                  </div>
+
+                  <div class="revision-item" style="border-left-color: var(--color-emerald);">
+                    <div class="revision-item-meta">
+                      <span class="revision-item-title">Chemistry — Chemical Bonding</span>
+                      <span class="revision-item-sub">Interval: 3 Days (Rev 2)</span>
+                    </div>
+                    <span class="badge badge-chemistry">Chemistry</span>
+                  </div>
+
+                  <div class="revision-item" style="border-left-color: var(--color-violet);">
+                    <div class="revision-item-meta">
+                      <span class="revision-item-title">Maths — Integration Formulas</span>
+                      <span class="revision-item-sub">Interval: 1 Day (Rev 1)</span>
+                    </div>
+                    <span class="badge badge-maths">Maths</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Mid Section 2-Column: Syllabus Progress & Today's Tasks -->
+            <div class="dashboard-grid-mid">
+              
+              <!-- CARD 5: Syllabus Progress -->
+              <div class="card" id="card-syllabus-progress">
+                <div class="card-header">
+                  <div class="card-title-group">
+                    <div class="card-icon-wrap" style="color: var(--color-cyan);">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
+                    </div>
+                    <div>
+                      <h3 class="card-title">Syllabus Progress</h3>
+                      <span class="card-subtitle">Target: JEE / NDA Core</span>
+                    </div>
+                  </div>
+                  <span class="card-action" data-goto="syllabus">View Full Syllabus &rarr;</span>
+                </div>
+
+                <div class="syllabus-overall-box">
+                  <div>
+                    <span class="mono" style="font-size: var(--font-size-3xl); font-weight: 800; color: var(--text-primary);">62%</span>
+                    <p class="text-muted" style="font-size: var(--font-size-xs);">Overall Completion (78 / 125 Topics)</p>
+                  </div>
+                  <div style="text-align: right;">
+                    <span class="badge badge-success">On Schedule</span>
+                    <p class="text-secondary" style="font-size: var(--font-size-xs); margin-top: 4px;">Target: Complete by Nov</p>
+                  </div>
+                </div>
+
+                <div class="syllabus-stat-row">
+                  <!-- Physics Progress -->
+                  <div class="subject-item-progress">
+                    <div class="subject-header-mini">
+                      <span style="color: var(--subject-physics);">Physics (Class 11 &amp; 12)</span>
+                      <span class="mono">68%</span>
+                    </div>
+                    <div class="progress-track">
+                      <div class="progress-fill fill-physics" style="width: 68%;"></div>
+                    </div>
+                  </div>
+
+                  <!-- Chemistry Progress -->
+                  <div class="subject-item-progress">
+                    <div class="subject-header-mini">
+                      <span style="color: var(--subject-chemistry);">Chemistry (Physical, Inorganic, Organic)</span>
+                      <span class="mono">54%</span>
+                    </div>
+                    <div class="progress-track">
+                      <div class="progress-fill fill-chemistry" style="width: 54%;"></div>
+                    </div>
+                  </div>
+
+                  <!-- Mathematics Progress -->
+                  <div class="subject-item-progress">
+                    <div class="subject-header-mini">
+                      <span style="color: var(--subject-maths);">Mathematics (Calculus, Algebra, Coordinate)</span>
+                      <span class="mono">64%</span>
+                    </div>
+                    <div class="progress-track">
+                      <div class="progress-fill fill-maths" style="width: 64%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARD 6: Today's Tasks -->
+              <div class="card" id="card-todays-tasks">
+                <div class="card-header">
+                  <div class="card-title-group">
+                    <div class="card-icon-wrap" style="color: var(--color-primary);">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                    </div>
+                    <div>
+                      <h3 class="card-title">Today's Tasks</h3>
+                      <span class="card-subtitle">4 Key Focus Deliverables</span>
+                    </div>
+                  </div>
+                  <span class="badge badge-outline">2/4 Done</span>
+                </div>
+
+                <div class="task-list">
+                  <div class="task-item completed">
+                    <div class="task-left">
+                      <div class="task-checkbox-mock checked">✓</div>
+                      <span class="task-title">Physics — Current Electricity Numerical Practice</span>
+                    </div>
+                    <span class="badge badge-physics">Physics</span>
+                  </div>
+
+                  <div class="task-item completed">
+                    <div class="task-left">
+                      <div class="task-checkbox-mock checked">✓</div>
+                      <span class="task-title">Chemistry — Organic Reaction Mechanisms Note Review</span>
+                    </div>
+                    <span class="badge badge-chemistry">Chem</span>
+                  </div>
+
+                  <div class="task-item">
+                    <div class="task-left">
+                      <div class="task-checkbox-mock"></div>
+                      <span class="task-title">Maths — Integration by Parts 15 PYQ Problems</span>
+                    </div>
+                    <span class="badge badge-maths">Maths</span>
+                  </div>
+
+                  <div class="task-item">
+                    <div class="task-left">
+                      <div class="task-checkbox-mock"></div>
+                      <span class="task-title">Revision — Laws of Motion Spaced Flashcards</span>
+                    </div>
+                    <span class="badge badge-urgent">Priority</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- CARD 7: Goals & Milestones Progress -->
+            <div class="card" id="card-goals-progress">
+              <div class="card-header">
+                <div class="card-title-group">
+                  <div class="card-icon-wrap" style="color: var(--exam-target);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></svg>
+                  </div>
+                  <div>
+                    <h3 class="card-title">Goals &amp; Exam Milestones</h3>
+                    <span class="card-subtitle">Active Sprint Objectives</span>
+                  </div>
+                </div>
+                <span class="card-action" data-goto="goals">Manage Goals &rarr;</span>
+              </div>
+
+              <div class="goals-progress-list">
+                <div class="goal-track-item">
+                  <div class="progress-info">
+                    <span style="font-weight: 600;">Sprint Goal: Complete Rotational Motion &amp; Solve 50 PYQs</span>
+                    <span class="mono" style="color: var(--color-primary);">75%</span>
+                  </div>
+                  <div class="progress-track">
+                    <div class="progress-fill fill-primary" style="width: 75%;"></div>
+                  </div>
+                </div>
+
+                <div class="goal-track-item">
+                  <div class="progress-info">
+                    <span style="font-weight: 600;">Weekly Target: Maintain 21 Hours Total Focus Time</span>
+                    <span class="mono" style="color: var(--color-emerald);">16.5 / 21 hrs</span>
+                  </div>
+                  <div class="progress-track">
+                    <div class="progress-fill fill-chemistry" style="width: 78%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- VIEW 2: FOCUS TIMER (Phase 3 Engine Active)                     -->
+        <!-- ================================================================ -->
+        <section id="view-timer" class="view-container">
+          <div class="module-placeholder-view">
+            <div class="module-header-banner">
+              <div class="module-info-group">
+                <span class="module-phase-badge" style="background: rgba(16, 185, 129, 0.12); color: var(--color-emerald);">Phase 3 Engine Active</span>
+                <h2>Focus Timer &amp; Deep Work</h2>
+                <p>High-precision Pomodoro engine with custom presets (25/5, 50/10, 90/15) and full-screen Deep Work Mode.</p>
+              </div>
+              <button id="timer-deepwork-btn" class="btn btn-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+                Deep Work Mode
+              </button>
+            </div>
+            
+            <div class="timer-container">
+              <!-- Mode Tabs: Work, Short Break, Long Break -->
+              <div class="timer-mode-tabs">
+                <button class="mode-tab-btn active" data-mode="work">Focus (Work)</button>
+                <button class="mode-tab-btn" data-mode="short_break">Short Break</button>
+                <button class="mode-tab-btn" data-mode="long_break">Long Break</button>
+              </div>
+
+              <!-- Preset Selectors Bar -->
+              <div class="timer-presets-bar">
+                <button class="preset-btn active" data-preset="25/5">25 / 5 Standard</button>
+                <button class="preset-btn" data-preset="50/10">50 / 10 Long Focus</button>
+                <button class="preset-btn" data-preset="90/15">90 / 15 Deep Cycle</button>
+                <button class="preset-btn" data-preset="custom">Custom Duration...</button>
+              </div>
+
+              <!-- Custom Preset Drawer Form -->
+              <div id="custom-timer-drawer" class="custom-timer-drawer">
+                <p style="font-size: var(--font-size-xs); font-weight: 700; color: var(--text-primary); margin-bottom: 6px;">Configure Custom Durations (Minutes)</p>
+                <div class="custom-inputs-grid">
+                  <div class="custom-input-group">
+                    <label>Work (min)</label>
+                    <input type="number" id="custom-work-input" min="1" max="180" value="25">
+                  </div>
+                  <div class="custom-input-group">
+                    <label>Short Break (min)</label>
+                    <input type="number" id="custom-short-input" min="1" max="60" value="5">
+                  </div>
+                  <div class="custom-input-group">
+                    <label>Long Break (min)</label>
+                    <input type="number" id="custom-long-input" min="1" max="90" value="15">
+                  </div>
+                </div>
+                <div class="flex justify-between items-center" style="margin-top: 12px;">
+                  <span style="font-size: 0.7rem; color: var(--text-muted);">Durations saved to your profile</span>
+                  <button id="custom-timer-save-btn" class="btn btn-primary btn-sm">Apply Durations</button>
+                </div>
+              </div>
+
+              <!-- Circular Progress Dial Card -->
+              <div class="card timer-dial-card">
+                <div class="timer-dial-svg-wrap">
+                  <svg class="dial-circle-svg" viewBox="0 0 280 280">
+                    <circle class="dial-circle-bg" cx="140" cy="140" r="120" fill="none" />
+                    <circle id="timer-progress-ring" class="dial-circle-progress" cx="140" cy="140" r="120" fill="none" />
+                  </svg>
+                  <div class="timer-dial-center">
+                    <span id="timer-digits" class="timer-digits">25:00</span>
+                    <span id="timer-mode-label" class="timer-mode-label">Focus Session</span>
+                    <span id="timer-session-label" class="timer-session-label">Cycle #1 of 4 • 2 Sessions Done</span>
+                  </div>
+                </div>
+
+                <!-- Action Controls -->
+                <div class="timer-controls-row">
+                  <button id="timer-reset-btn" class="btn btn-secondary" title="Reset Current Session">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                    Reset
+                  </button>
+
+                  <button id="timer-main-btn" class="btn btn-primary btn-lg timer-main-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    Start Focus
+                  </button>
+
+                  <button id="timer-skip-btn" class="btn btn-secondary" title="Skip to Next Session">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 4 15 12 5 20 5 4"/><line x1="19" x2="19" y1="5" y2="19"/></svg>
+                    Skip
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- VIEW 3: SYLLABUS (Placeholder Frame for Phase 4)                -->
+        <!-- ================================================================ -->
+        <section id="view-syllabus" class="view-container">
+          <div class="module-placeholder-view">
+            <div class="module-header-banner">
+              <div class="module-info-group">
+                <span class="module-phase-badge">Phase 4 — Dynamic Syllabus Tracker</span>
+                <h2>Dynamic Syllabus Tracker</h2>
+                <p>Complete chapter, topic, and completion percentage hierarchies for Physics, Chemistry, and Mathematics.</p>
+              </div>
+              <span class="badge badge-outline">Ready for Phase 4 Data</span>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-4);">
+              <div class="card">
+                <h4 style="color: var(--subject-physics); margin-bottom: 8px;">Physics Syllabus</h4>
+                <p style="font-size: var(--font-size-xs); margin-bottom: var(--space-3);">Mechanics, Electrodynamics, Optics, Modern Physics</p>
+                <div class="progress-track"><div class="progress-fill fill-physics" style="width: 68%;"></div></div>
+              </div>
+              <div class="card">
+                <h4 style="color: var(--subject-chemistry); margin-bottom: 8px;">Chemistry Syllabus</h4>
+                <p style="font-size: var(--font-size-xs); margin-bottom: var(--space-3);">Physical Chemistry, Organic Chemistry, Inorganic</p>
+                <div class="progress-track"><div class="progress-fill fill-chemistry" style="width: 54%;"></div></div>
+              </div>
+              <div class="card">
+                <h4 style="color: var(--subject-maths); margin-bottom: 8px;">Mathematics Syllabus</h4>
+                <p style="font-size: var(--font-size-xs); margin-bottom: var(--space-3);">Calculus, Vectors &amp; 3D, Algebra, Trigonometry</p>
+                <div class="progress-track"><div class="progress-fill fill-maths" style="width: 64%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- VIEW 4: GOALS (Placeholder Frame for Phase 4)                   -->
+        <!-- ================================================================ -->
+        <section id="view-goals" class="view-container">
+          <div class="module-placeholder-view">
+            <div class="module-header-banner">
+              <div class="module-info-group">
+                <span class="module-phase-badge">Phase 4 — Goal Tracking</span>
+                <h2>Goal Tracking &amp; Milestones</h2>
+                <p>Target deadlines, daily targets, and target completion prediction for JEE &amp; NDA.</p>
+              </div>
+              <span class="badge badge-outline">Ready for Phase 4 Logic</span>
+            </div>
+            <div class="card">
+              <p class="text-secondary">Modular goal tracking architecture with daily target calculation will be wired in Phase 4.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- VIEW 5: FLASHCARDS (Placeholder Frame for Phase 5)              -->
+        <!-- ================================================================ -->
+        <section id="view-flashcards" class="view-container">
+          <div class="module-placeholder-view">
+            <div class="module-header-banner">
+              <div class="module-info-group">
+                <span class="module-phase-badge">Phase 5 — Flashcards Engine</span>
+                <h2>Interactive Flashcards</h2>
+                <p>Subject decks, 3D card-flip animations, spaced recall difficulty rating, and accuracy metrics.</p>
+              </div>
+              <span class="badge badge-outline">Ready for Phase 5</span>
+            </div>
+            <div class="card" style="min-height: 220px; display: flex; align-items: center; justify-content: center; text-align: center;">
+              <div>
+                <h3 style="margin-bottom: 8px;">What is Lenz's Law of Electromagnetic Induction?</h3>
+                <p class="text-muted" style="font-size: var(--font-size-sm);">Click card to reveal answer &amp; rate difficulty</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- VIEW 6: QUIZ (Placeholder Frame for Phase 6)                    -->
+        <!-- ================================================================ -->
+        <section id="view-quiz" class="view-container">
+          <div class="module-placeholder-view">
+            <div class="module-header-banner">
+              <div class="module-info-group">
+                <span class="module-phase-badge">Phase 6 — Interactive Quiz</span>
+                <h2>Interactive Quiz Arena</h2>
+                <p>Physics, Chemistry, Maths, JEE, and NDA timed quizzes with step-by-step explanations.</p>
+              </div>
+              <span class="badge badge-outline">Ready for Phase 6</span>
+            </div>
+            <div class="card">
+              <p class="text-secondary">Interactive quiz engine with timer, score tracking, accuracy metrics, and weak-topic analysis will be wired in Phase 6.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- VIEW 7: RESOURCES (Placeholder Frame for Phase 7)               -->
+        <!-- ================================================================ -->
+        <section id="view-resources" class="view-container">
+          <div class="module-placeholder-view">
+            <div class="module-header-banner">
+              <div class="module-info-group">
+                <span class="module-phase-badge">Phase 7 — Resource Vault</span>
+                <h2>Centralized Study Resource Vault</h2>
+                <p>PDF Notes, PYQ papers, formula sheets, and curated reference materials with one-click opening.</p>
+              </div>
+              <span class="badge badge-outline">Ready for Phase 7</span>
+            </div>
+            <div class="card">
+              <p class="text-secondary">Study resource manager with search, tagging, favorites, and subject filters will be activated in Phase 7.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- VIEW 8: REVISION (Placeholder Frame for Phase 8)                -->
+        <!-- ================================================================ -->
+        <section id="view-revision" class="view-container">
+          <div class="module-placeholder-view">
+            <div class="module-header-banner">
+              <div class="module-info-group">
+                <span class="module-phase-badge">Phase 8 — Automated Revision Scheduler</span>
+                <h2>Automated Revision Scheduler</h2>
+                <p>Spaced-repetition engine (1d, 3d, 7d, 14d, 30d) for mastery retention.</p>
+              </div>
+              <span class="badge badge-outline">Ready for Phase 8</span>
+            </div>
+            <div class="card">
+              <p class="text-secondary">Automated spaced repetition scheduler calculating intervals and overdue alerts will be wired in Phase 8.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- VIEW 9: AI TUTOR (Placeholder Frame for Phase 10)               -->
+        <!-- ================================================================ -->
+        <section id="view-ai" class="view-container">
+          <div class="module-placeholder-view">
+            <div class="module-header-banner">
+              <div class="module-info-group">
+                <span class="module-phase-badge">Phase 10 — NOX AI Tutor</span>
+                <h2>NOX — Personal AI Tutor</h2>
+                <p>PCM doubt solver, formula explanations, active function calling, voice commands, and camera scanner.</p>
+              </div>
+              <span class="badge badge-outline">Ready for Phase 10–13</span>
+            </div>
+            <div class="card">
+              <div style="padding: var(--space-4); background: var(--bg-surface-elevated); border-radius: var(--radius-md); margin-bottom: var(--space-3);">
+                <strong>NOX AI:</strong> Hello Arjun! I am your AI study mentor for JEE and NDA. In Phase 10, you can ask me to solve equations, break down organic reactions, or control the app via voice.
+              </div>
+              <div class="flex gap-2">
+                <input type="text" placeholder="Ask NOX any PCM doubt... (Will be enabled in Phase 10)" disabled style="flex: 1; padding: 10px 14px; background: var(--bg-surface-elevated); border-radius: var(--radius-md); color: var(--text-muted);">
+                <button class="btn btn-primary" disabled>Send</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- VIEW 10: ANALYTICS (Placeholder Frame for Phase 9)              -->
+        <!-- ================================================================ -->
+        <section id="view-analytics" class="view-container">
+          <div class="module-placeholder-view">
+            <div class="module-header-banner">
+              <div class="module-info-group">
+                <span class="module-phase-badge">Phase 9 — Analytics Dashboard</span>
+                <h2>Performance &amp; Study Analytics</h2>
+                <p>Deep work velocity, weekly study distribution, subject mastery trends, and weak topic indicators.</p>
+              </div>
+              <span class="badge badge-outline">Ready for Phase 9</span>
+            </div>
+            <div class="card">
+              <p class="text-secondary">Interactive charts and progress analytics will be implemented in Phase 9.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- VIEW 11: SETTINGS (Placeholder Frame)                           -->
+        <!-- ================================================================ -->
+        <section id="view-settings" class="view-container">
+          <div class="module-placeholder-view">
+            <div class="module-header-banner">
+              <div class="module-info-group">
+                <span class="module-phase-badge">System Settings</span>
+                <h2>Preferences &amp; Target Exams</h2>
+                <p>Customize exam goal targets (PCM, JEE Main/Adv, NDA), daily study hours, notifications, and appearance.</p>
+              </div>
+            </div>
+            <div class="card">
+              <p class="text-secondary">Settings configuration panel.</p>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- FULLSCREEN DEEP WORK MODE OVERLAY                                -->
+  <!-- ================================================================ -->
+  <div id="deep-work-overlay" class="deep-work-overlay">
+    <div class="deep-work-topbar">
+      <div class="deep-work-badge">
+        <span class="pulse-dot"></span>
+        <span>Deep Work Session Active</span>
+      </div>
+      <button id="dw-exit-btn" class="deep-work-exit-btn" title="Exit Deep Work (Esc)">
+        <span>Exit Focus Mode</span>
+        <span class="kbd-shortcut" style="font-size: 0.65rem; padding: 2px 6px; background: rgba(255,255,255,0.1); border-radius: 4px;">Esc</span>
+      </button>
+    </div>
+
+    <div class="deep-work-center">
+      <span id="dw-focus-status" class="deep-work-focus-task">Deep Work in Progress: Zero Distractions</span>
+      <div id="dw-timer-digits" class="deep-work-digits">25:00</div>
+      <p id="dw-quote" class="deep-work-quote">“Focus is a muscle. The deeper you go, the sharper you become.”</p>
+    </div>
+
+    <div class="deep-work-bottom">
+      <button id="dw-main-btn" class="btn btn-primary btn-lg">Pause Focus</button>
+    </div>
+  </div>
+
+  <!-- Entry Script for Modular Architecture -->
+</body>
+</html>
